@@ -1,0 +1,112 @@
+@use "_mixins" as *;
+@use "_font" as *;
+@use "_colors" as *;
+
+header {
+    height: 50px;
+    @include flex;
+    @include setFont;
+    justify-content: space-around;
+    gap: 2rem;
+    h1 {
+        color: $white;
+        font-weight: 900;
+        text-transform: uppercase;
+        sub {
+            text-transform: lowercase;
+            font-weight: 400;
+            color: lighten($color: $indygo, $amount: 30);
+        }
+    }
+    div {
+        @include flex;
+        height: 100%;
+        width: 30rem;
+        input {
+            background-color: $darkL;
+            width: 90%;
+            outline: none;
+            border: none;
+            height: 2rem;
+            padding: 1rem;
+            border-radius: 1rem 0 0 1rem;
+            color: $white;
+            border: 1px solid rgba(53, 52, 52, 0.226);
+            &:focus {
+                outline: 1px solid lighten($color: $darkL, $amount: 10);
+            }
+        }
+        input:focus + button {
+            outline: 2px solid lighten($color: $darkL, $amount: 10);
+        }
+        button {
+            background-color: lighten($color: $darkL, $amount: 10);
+            @include flex;
+            width: 10%;
+            height: 2rem;
+            border-radius: 0 1rem 1rem 0;
+            border: 1px solid rgba(53, 52, 52, 0.226);
+            cursor: pointer;
+        }
+    }
+}
+
+.radio-input input {
+    display: none;
+  }
+  
+  .radio-input {
+    --container_width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: $darkL;
+    color: lighten($color: $dark, $amount: 35);
+    width: var(--container_width);
+    height: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(53, 52, 52, 0.226);
+  }
+  
+  .radio-input label {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 14px;
+  }
+  
+  .selection {
+    display: none;
+    position: absolute;
+    height: 2rem;
+    width: calc(var(--container_width) / 2);
+    z-index: 0;
+    left: 0;
+    top: 0;
+    transition: .15s ease;
+  }
+  
+  .radio-input label:has(input:checked) {
+    color: $white;
+    
+  }
+  
+  .radio-input label:has(input:checked) ~ .selection {
+    background-color: lighten($color: $indygo, $amount: 30);
+    display: inline-block;
+  }
+  
+  .radio-input label:nth-child(1):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 0/2));
+  }
+  
+  .radio-input label:nth-child(2):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 1/2));
+  }

@@ -1,0 +1,18 @@
+@use "_mixins" as *;
+@use "_font" as *;
+@use "_colors" as *;
+
+footer {
+    height: 70px;
+    @include flex;
+    @include setFont;
+    color: $white;
+    div {
+        @include flexColumn;
+        span {
+            a {
+                color: lighten($color: $indygo, $amount: 30);
+            }
+        }
+    }
+}

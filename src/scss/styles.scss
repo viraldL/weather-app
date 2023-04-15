@@ -1,3 +1,10 @@
+@use "_reset";
+@use "_footer";
+@use "_header";
+@use "_main";
+
 body {
-    background-color: red;
+    height: 100vh;
+    background: rgb(30,27,75);
+    background: radial-gradient(circle, rgba(30,27,75,1) 0%, rgba(12,10,9,1) 70%);
 }
