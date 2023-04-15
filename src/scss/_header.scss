@@ -15,7 +15,7 @@ header {
         sub {
             text-transform: lowercase;
             font-weight: 400;
-            color: lighten($color: $indygo, $amount: 30);
+            color: lighten($color: $pink, $amount: 20);
         }
     }
     div {
@@ -99,7 +99,7 @@ header {
   }
   
   .radio-input label:has(input:checked) ~ .selection {
-    background-color: lighten($color: $indygo, $amount: 30);
+    background-color: lighten($color: $pink, $amount: 30);
     display: inline-block;
   }
   

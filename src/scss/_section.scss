@@ -1,0 +1,8 @@
+@use "_mixins" as *;
+@use "_font" as *;
+@use "_colors" as *;
+
+section {
+    height: 500px;
+    background-image: linear-gradient(to bottom, #1e1b4b, #362463, #532b7a, #72308e, #9533a1);
+}
