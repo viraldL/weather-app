@@ -1,3 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  color: #f5f5f4;
+}
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer div span a {
+  color: #4b44bc;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  justify-content: space-around;
+  gap: 2rem;
+}
+header h1 {
+  color: #f5f5f4;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+header h1 sub {
+  text-transform: lowercase;
+  font-weight: 400;
+  color: #4b44bc;
+}
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30rem;
+}
+header div input {
+  background-color: #1c1917;
+  width: 90%;
+  outline: none;
+  border: none;
+  height: 2rem;
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  color: #f5f5f4;
+  border: 1px solid rgba(53, 52, 52, 0.226);
+}
+header div input:focus {
+  outline: 1px solid #38322e;
+}
+header div input:focus + button {
+  outline: 2px solid #38322e;
+}
+header div button {
+  background-color: #38322e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 2rem;
+  border-radius: 0 1rem 1rem 0;
+  border: 1px solid rgba(53, 52, 52, 0.226);
+  cursor: pointer;
+}
+
+.radio-input input {
+  display: none;
+}
+
+.radio-input {
+  --container_width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: #1c1917;
+  color: #725f56;
+  width: var(--container_width);
+  height: 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(53, 52, 52, 0.226);
+}
+
+.radio-input label {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
+.selection {
+  display: none;
+  position: absolute;
+  height: 2rem;
+  width: calc(var(--container_width) / 2);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: 0.15s ease;
+}
+
+.radio-input label:has(input:checked) {
+  color: #f5f5f4;
+}
+
+.radio-input label:has(input:checked) ~ .selection {
+  background-color: #4b44bc;
+  display: inline-block;
+}
+
+.radio-input label:nth-child(1):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 0 / 2));
+}
+
+.radio-input label:nth-child(2):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 1 / 2));
+}
+
 body {
-  background-color: red;
+  height: 100vh;
+  background: rgb(30, 27, 75);
+  background: radial-gradient(circle, rgb(30, 27, 75) 0%, rgb(12, 10, 9) 70%);
 }/*# sourceMappingURL=styles.css.map */
