@@ -15,7 +15,7 @@ header {
         sub {
             text-transform: lowercase;
             font-weight: 400;
-            color: lighten($color: $pink, $amount: 20);
+            color: darken($color: $white, $amount: 20);
         }
     }
     div {

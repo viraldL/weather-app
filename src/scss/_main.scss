@@ -3,9 +3,80 @@
 @use "_colors" as *;
 
 main {
-    height: 300px;
+    height: 400px;
     background-image: url(../images/layered-peaks-haikei.svg);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
+    @include flex;
+    justify-content: space-around;
+    #mainInfo {
+        padding: 0.5rem;
+        width: 250px;
+        height: 200px;
+        background: rgba( 0, 0, 0, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        .mainUp {
+            width: 100%;
+            height: calc(85% - 1rem);
+            @include flex;
+            .imgBox {
+                height: 100%;
+                width: 50%;
+                @include flexColumn;
+                @include setFont;
+                color: $white;
+                img {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            .infoBox {
+                width: 50%;
+                height: 100%;
+                @include setFont;
+                div {
+                    @include flex;
+                    margin: 5px 0;
+                }
+                span {
+                    color: $white;
+                }
+                #temp {
+                    font-size: 3rem;
+                    font-weight: 900;
+                }
+                #day {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .mainDown {
+            height: calc(15% + 1rem);
+            @include flex;
+            @include setFont;
+            color: $white;
+            font-size: 1.25rem;
+        }
+    }
+
+
+    #hourInfo {
+        height: 200px;
+        width: 500px;
+        background: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+    }
+    .spanPink {
+        font-size: 0.8rem;
+        color: darken($color: $white, $amount: 10);
+    }
 }
