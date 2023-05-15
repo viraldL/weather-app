@@ -189,6 +189,10 @@ main #mainInfo .mainUp .imgBox img {
 main #mainInfo .mainUp .infoBox {
   width: 50%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-family: "Lato", sans-serif;
 }
 main #mainInfo .mainUp .infoBox div {
@@ -196,6 +200,9 @@ main #mainInfo .mainUp .infoBox div {
   align-items: center;
   justify-content: center;
   margin: 5px 0;
+}
+main #mainInfo .mainUp .infoBox div:not(:last-child) {
+  margin: 0px 0;
 }
 main #mainInfo .mainUp .infoBox span {
   color: #f5f5f4;
