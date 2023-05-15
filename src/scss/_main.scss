@@ -67,13 +67,45 @@ main {
 
     #hourInfo {
         height: 200px;
-        width: 500px;
+        width: 600px;
         background: rgba(0, 0, 0, 0.25);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         backdrop-filter: blur( 7px );
         -webkit-backdrop-filter: blur( 7px );
         border-radius: 10px;
         border: 1px solid rgba(0, 0, 0, 0.18);
+        .today {
+            height: 2rem;
+            @include flex;
+            @include setFont;
+            font-weight: 600;
+            color: $white;
+            font-size: 1.25rem;
+        }
+        #hoursTemp {
+            height: calc(100% - 2rem);
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr 1fr;
+            margin: 0 1rem;
+            gap: 10px;
+            .hour{
+                @include flex;
+                flex-direction: column;
+                .hourTime {
+                    @include setFont;
+                    font-size: 0.8rem;
+                    color: darken($color: $white, $amount: 10);
+                }
+                .imgHour{
+                    width: 34px;
+                }
+                .tempHour {
+                    @include setFont;
+                    color: $white;
+                }
+            }
+        }
     }
     .spanPink {
         font-size: 0.8rem;
