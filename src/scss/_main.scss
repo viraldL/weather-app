@@ -38,10 +38,15 @@ main {
             .infoBox {
                 width: 50%;
                 height: 100%;
+                @include flex;
+                flex-direction: column;
                 @include setFont;
                 div {
                     @include flex;
                     margin: 5px 0;
+                }
+                div:not(:last-child) {
+                    margin: 0px 0
                 }
                 span {
                     color: $white;

@@ -18,11 +18,11 @@
 
         <div class="radio-input">
             <label>
-            <input type="radio" id="cels" name="value-radio" value="cels" checked>
+            <input type="radio" id="cels" name="value-radio" value="0" checked>
             <span>°C</span>
             </label>
             <label>
-              <input type="radio" id="fahren" name="value-radio" value="fahren">
+              <input type="radio" id="fahren" name="value-radio" value="1">
             <span>°F</span>
             </label>
             <span class="selection"></span>
@@ -31,45 +31,20 @@
     <main>
         <div id="mainInfo">
             <div class="mainUp">
-                <div class="imgBox"><img src="images/116.png" alt="weather icon"><span id="condition">Sunny</span></div>
+                <div class="imgBox"><img id="imgMain" src="" alt="weather icon"><span id="condition"></span></div>
                 <div class="infoBox">
-                    <div><span id="day">Sunday, 15.04.2023</span></div>
-                    <div><span id="time">14:55</span></div>
-                    <div><span id="temp">14°</span></div>
+                    <div><span id="day"></span></div>
+                    <div><span id="time"></span></div>
+                    <div><span id="temp"></span></div>
 
                 </div>
             </div>
-            <div class="mainDown"><span id="city">Poznan, Poland</span></div>
+            <div class="mainDown"><span id="city"></span></div>
         </div>
         <div id="hourInfo">
             <div class="today"><span>Today</span></div>
             <div id="hoursTemp">
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>
-                
-              
+                <!-- <div class="hour" id="hour0"><span class="hourTime" id="hourTime0">00:00</span><img class="imgHour" id="imgHour0" src="images/116.png" alt=""><span class="tempHour" id="tempHour0">13°</span></div>  -->
             </div>
         </div>
     </main>
