@@ -46,7 +46,7 @@ header h1 {
 header h1 sub {
   text-transform: lowercase;
   font-weight: 400;
-  color: #c56ad0;
+  color: #c4c4bf;
 }
 header div {
   display: flex;
@@ -144,11 +144,91 @@ header div button {
 }
 
 main {
-  height: 300px;
+  height: 400px;
   background-image: url(../images/layered-peaks-haikei.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+main #mainInfo {
+  padding: 0.5rem;
+  width: 250px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+main #mainInfo .mainUp {
+  width: 100%;
+  height: calc(85% - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #mainInfo .mainUp .imgBox {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  color: #f5f5f4;
+}
+main #mainInfo .mainUp .imgBox img {
+  width: 64px;
+  height: 64px;
+}
+main #mainInfo .mainUp .infoBox {
+  width: 50%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+main #mainInfo .mainUp .infoBox div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
+main #mainInfo .mainUp .infoBox span {
+  color: #f5f5f4;
+}
+main #mainInfo .mainUp .infoBox #temp {
+  font-size: 3rem;
+  font-weight: 900;
+}
+main #mainInfo .mainUp .infoBox #day {
+  font-size: 0.8rem;
+}
+main #mainInfo .mainDown {
+  height: calc(15% + 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  color: #f5f5f4;
+  font-size: 1.25rem;
+}
+main #hourInfo {
+  height: 200px;
+  width: 500px;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+main .spanPink {
+  font-size: 0.8rem;
+  color: #ddddd9;
 }
 
 section {
@@ -159,5 +239,5 @@ section {
 body {
   height: 100vh;
   background: rgb(30, 27, 75);
-  background: radial-gradient(circle, rgb(30, 27, 75) 0%, rgb(12, 10, 9) 70%);
+  background: radial-gradient(circle, rgb(30, 27, 75) 0%, rgb(34, 0, 82) 70%);
 }/*# sourceMappingURL=styles.css.map */
