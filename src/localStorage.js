@@ -1,9 +1,14 @@
-function populateStorage() {
+import {createMainInfo, createHourlyInfo} from "./createMain.js";
+
+function populateStorageType() {
             localStorage.setItem(`tempType`, document.querySelector('input[name="value-radio"]:checked').value);
-            // localStorage.setItem(`city`, city);
 }
 
-function retriveStorage() {
+function populateStorageCity(city) {
+            localStorage.setItem(`city`, city);
+}
+
+function retriveStorageType() {
     if(localStorage.getItem("tempType") == 0) {
         document.querySelectorAll('input[name="value-radio"]')[0].checked = true;
     } else {
@@ -11,4 +16,9 @@ function retriveStorage() {
     }
 }
 
-export { populateStorage, retriveStorage };
+function retriveStorageCity() {
+    createMainInfo(localStorage.getItem("city"));
+    createHourlyInfo(localStorage.getItem("city"));
+}
+
+export { populateStorageType, populateStorageCity, retriveStorageType, retriveStorageCity };
