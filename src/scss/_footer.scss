@@ -3,17 +3,20 @@
 @use "_colors" as *;
 
 footer {
-    background-color: #9533A1;
+    box-shadow: 0 -5px 50px 20px #ffffff;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
     height: 70px;
     @include flex;
     @include setFont;
-    color: $white;
+    color: $dark;
     div {
-        background-color: $indygo;
         padding: 1rem;
         border-radius: 1rem 1rem 0 0;
-        border: 1px solid rgba(53, 52, 52, 0.226);
-        box-shadow: 0 0 10px rgba($color: $dark, $alpha: 0.2);
         @include flexColumn;
         span {
             a {

@@ -3,22 +3,23 @@
 @use "_colors" as *;
 
 main {
-    height: 400px;
-    background-image: url(../images/layered-peaks-haikei.svg);
+    height: 500px;
+    background-image: url(../images/pexels-joyston-judah-933054.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
     @include flex;
     justify-content: space-around;
     @media (max-width: 1000px) {
-        height: 500px;
+        height: 700px;
         flex-direction: column;
+        padding-top: 200px;
       }
       @media (max-width: 700px) {
-        height: 600px;
+        height: 800px;
       }
       @media (max-width: 400px) {
-        height: 800px;
+        height: 1000px;
       }
     #mainInfo {
         padding: 0.5rem;
@@ -142,4 +143,19 @@ main {
         font-size: 0.8rem;
         color: darken($color: $white, $amount: 10);
     }
+}
+
+.gradient1 {
+    position: relative;
+    z-index: 2;
+    height: 25px;
+    background-color: #cdcdcd;
+    box-shadow: 0 -5px 100px 100px #cdcdcd;
+}
+.gradient2 {
+    position: relative;
+    z-index: 1;
+    height: 25px;
+    background-color: #cdcdcd;
+    box-shadow: 0 5px 100px 50px #cdcdcd;
 }
