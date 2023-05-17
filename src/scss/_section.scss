@@ -3,6 +3,49 @@
 @use "_colors" as *;
 
 section {
+    @include flex;
     height: 500px;
     background-image: linear-gradient(to bottom, #1e1b4b, #362463, #532b7a, #72308e, #9533a1);
+    .forecast {
+        display: grid;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+        padding: 1rem;
+        width: 500px;
+        height: 80%;
+        background: rgba( 0, 0, 0, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        .forecastHeader {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            text-align: start;
+            span {
+                @include setFont;
+                color: $white;
+                font-weight: 600;
+            }
+        }
+        .forecastBox {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            border-top: 1px solid rgba($color: $dark, $alpha: 0.5);
+            text-align: start;
+            align-items: center;
+            @include setFont;
+            color: $white;
+            div {
+                @include flex;
+                justify-content: start;
+            }
+        }
+        .spanPlaceholder {
+            @include flex;
+            @include setFont;
+            border-top: 1px solid rgba($color: $dark, $alpha: 0.5);
+            color: rgba($color: $dark, $alpha: 0.5);
+        }
+    }
 }

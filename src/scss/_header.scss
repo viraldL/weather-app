@@ -8,6 +8,11 @@ header {
     @include setFont;
     justify-content: space-around;
     gap: 2rem;
+    @media (max-width: 1000px) {
+      height: 150px;
+      flex-direction: column;
+      gap: 0;
+    }
     h1 {
         color: $white;
         font-weight: 900;
@@ -22,6 +27,12 @@ header {
         @include flex;
         height: 100%;
         width: 30rem;
+        @media (max-width: 1000px) {
+          width: 20rem;
+        }
+        @media (max-width: 350px) {
+          width: 15rem;
+        }
         input {
             background-color: $darkL;
             width: 90%;
@@ -47,6 +58,9 @@ header {
             border-radius: 0 1rem 1rem 0;
             border: 1px solid rgba(53, 52, 52, 0.226);
             cursor: pointer;
+            @media (max-width: 350px) {
+              width: 20%;
+            }
         }
     }
 }
@@ -67,6 +81,9 @@ header {
     height: 2rem;
     overflow: hidden;
     border: 1px solid rgba(53, 52, 52, 0.226);
+    @media (max-width: 1000px) {
+      height: 3rem;
+    }
   }
   
   .radio-input label {
@@ -80,6 +97,9 @@ header {
     font-weight: 600;
     letter-spacing: -1px;
     font-size: 14px;
+    @media (max-width: 1000px) {
+      height: 2rem;
+    }
   }
   
   .selection {

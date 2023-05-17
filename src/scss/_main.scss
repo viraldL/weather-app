@@ -10,6 +10,16 @@ main {
     background-size: cover;
     @include flex;
     justify-content: space-around;
+    @media (max-width: 1000px) {
+        height: 500px;
+        flex-direction: column;
+      }
+      @media (max-width: 700px) {
+        height: 600px;
+      }
+      @media (max-width: 400px) {
+        height: 800px;
+      }
     #mainInfo {
         padding: 0.5rem;
         width: 250px;
@@ -79,6 +89,14 @@ main {
         -webkit-backdrop-filter: blur( 7px );
         border-radius: 10px;
         border: 1px solid rgba(0, 0, 0, 0.18);
+        @media (max-width: 700px) {
+            height: 350px;
+            width: 435px;
+          }
+          @media (max-width: 400px) {
+            height: 450px;
+            width: 335px;
+          }
         .today {
             height: 2rem;
             @include flex;
@@ -94,6 +112,14 @@ main {
             grid-template-rows: 1fr 1fr;
             margin: 0 1rem;
             gap: 10px;
+            @media (max-width: 700px) {
+                grid-template-columns: repeat(8, 1fr);
+                grid-template-rows: 1fr 1fr 1fr;
+              }
+            @media (max-width: 400px) {
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+              }
             .hour{
                 @include flex;
                 flex-direction: column;
