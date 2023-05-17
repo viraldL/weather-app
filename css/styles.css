@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   margin: 0;
@@ -6,20 +7,23 @@
 }
 
 footer {
-  background-color: #9533A1;
+  box-shadow: 0 -5px 50px 20px #ffffff;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Lato", sans-serif;
-  color: #f5f5f4;
+  color: #0c0a09;
 }
 footer div {
-  background-color: #1e1b4b;
   padding: 1rem;
   border-radius: 1rem 1rem 0 0;
-  border: 1px solid rgba(53, 52, 52, 0.226);
-  box-shadow: 0 0 10px rgba(12, 10, 9, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,12 +34,19 @@ footer div span a {
 }
 
 header {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Lato", sans-serif;
   justify-content: space-around;
+  background-color: transparent;
   gap: 2rem;
 }
 @media (max-width: 1000px) {
@@ -176,8 +187,8 @@ header div button {
 }
 
 main {
-  height: 400px;
-  background-image: url(../images/layered-peaks-haikei.svg);
+  height: 500px;
+  background-image: url(../images/pexels-joyston-judah-933054.jpg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -188,18 +199,19 @@ main {
 }
 @media (max-width: 1000px) {
   main {
-    height: 500px;
+    height: 700px;
     flex-direction: column;
+    padding-top: 200px;
   }
 }
 @media (max-width: 700px) {
   main {
-    height: 600px;
+    height: 800px;
   }
 }
 @media (max-width: 400px) {
   main {
-    height: 800px;
+    height: 1000px;
   }
 }
 main #mainInfo {
@@ -346,12 +358,30 @@ main .spanPink {
   color: #ddddd9;
 }
 
+.gradient1 {
+  position: relative;
+  z-index: 2;
+  height: 25px;
+  background-color: #cdcdcd;
+  box-shadow: 0 -5px 100px 100px #cdcdcd;
+}
+
+.gradient2 {
+  position: relative;
+  z-index: 1;
+  height: 25px;
+  background-color: #cdcdcd;
+  box-shadow: 0 5px 100px 50px #cdcdcd;
+}
+
 section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
-  background-image: linear-gradient(to bottom, #1e1b4b, #362463, #532b7a, #72308e, #9533a1);
+  height: 570px;
+  padding-top: 50px;
+  background-image: url(../images/pexels-miguel-á-padriñán-19670.jpg);
+  background-size: cover;
 }
 section .forecast {
   display: grid;
@@ -402,6 +432,4 @@ section .forecast .spanPlaceholder {
 
 body {
   height: 100vh;
-  background: rgb(30, 27, 75);
-  background: radial-gradient(circle, rgb(30, 27, 75) 0%, rgb(34, 0, 82) 70%);
 }/*# sourceMappingURL=styles.css.map */
