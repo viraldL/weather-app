@@ -1,12 +1,14 @@
 import requestWeather from "./request.js";
-import {createMainInfo, createHourlyInfo} from "./createMain.js";
 import { populateStorageType, populateStorageCity, retriveStorageType, retriveStorageCity } from "./localStorage.js";
 console.log(requestWeather("Wroclaw").then((res) => {console.log(res)}));
-// window.onload = createMainInfo("Wroclaw");
-// window.onload = createHourlyInfo("Wroclaw");
 window.onload = retriveStorageType();
 window.onload = retriveStorageCity();
 window.onload = populateStorageType();
+// window.onload = populateStorageCity();
+if(localStorage.getItem("city") === null) {
+    console.log("jes");
+    window.onload = populateStorageCity("Wroclaw");
+}
 let radios = document.querySelectorAll('input[name="value-radio"]');
 radios.forEach(radio => {
     radio.addEventListener("change", () => {

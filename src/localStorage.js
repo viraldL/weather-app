@@ -1,10 +1,10 @@
-import {createMainInfo, createHourlyInfo} from "./createMain.js";
+import {createMainInfo, createHourlyInfo, createForecast} from "./createMain.js";
 
 function populateStorageType() {
             localStorage.setItem(`tempType`, document.querySelector('input[name="value-radio"]:checked').value);
 }
 
-function populateStorageCity(city) {
+function populateStorageCity(city = "Wroclaw") {
             localStorage.setItem(`city`, city);
 }
 
@@ -19,6 +19,7 @@ function retriveStorageType() {
 function retriveStorageCity() {
     createMainInfo(localStorage.getItem("city"));
     createHourlyInfo(localStorage.getItem("city"));
+    createForecast(localStorage.getItem("city"));
 }
 
 export { populateStorageType, populateStorageCity, retriveStorageType, retriveStorageCity };
