@@ -5,12 +5,6 @@
 section {
     @include flex;
     height: 570px;
-    padding-top: 50px;
-    // background: rgb(1,20,50);
-    // background: linear-gradient(90deg, rgba(1,20,50,1) 0%, rgba(9,34,74,1) 50%, rgba(1,20,50,1) 100%);
-    // background-image: url(../images/pexels-miguel-á-padriñán-19670.jpg);
-    background-size: cover;
-    
     .forecast {
         display: grid;
         grid-template-rows: 1fr 2fr 2fr 2fr 2fr;

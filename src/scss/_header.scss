@@ -3,12 +3,6 @@
 @use "_colors" as *;
 
 header {
-    position:absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
     height: 50px;
     @include flex;
     @include setFont;
