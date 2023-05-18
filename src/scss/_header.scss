@@ -126,7 +126,7 @@ header {
   }
   
   .radio-input label:has(input:checked) ~ .selection {
-    background-color: lighten($color: $pink, $amount: 30);
+    background-color: $pink;
     display: inline-block;
   }
   

@@ -3,17 +3,10 @@
 @use "_colors" as *;
 
 footer {
-    box-shadow: 0 -5px 50px 20px #ffffff;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
     height: 70px;
     @include flex;
     @include setFont;
-    color: $dark;
+    color: $white;
     div {
         padding: 1rem;
         border-radius: 1rem 1rem 0 0;

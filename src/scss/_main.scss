@@ -4,10 +4,6 @@
 
 main {
     height: 500px;
-    background-image: url(../images/pexels-joyston-judah-933054.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;
     @include flex;
     justify-content: space-around;
     @media (max-width: 1000px) {
