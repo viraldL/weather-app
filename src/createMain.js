@@ -33,7 +33,6 @@ function createMainInfo(req) {
 
     }).catch(err => {
         alert("Enter valid city");
-        location.reload();
     })
 }
 
