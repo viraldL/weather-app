@@ -5,10 +5,10 @@ function currentTempType() {
     return tempType;
 }
 
-function getDayName(dateStr, locale)
-{
+function getDayName(dateStr) {
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var date = new Date(dateStr);
-    return date.toLocaleDateString(locale, { weekday: 'long' });        
+    return days[date.getDay()];
 }
 
 function createMainInfo(req) {
@@ -24,7 +24,7 @@ function createMainInfo(req) {
         let fullDate = res.location.localtime;
         let onlyDay = fullDate.slice(0,9);
         let onlyTime = fullDate.slice(10);
-        let convertedDate = getDayName(onlyDay, "en-US")
+        let convertedDate = getDayName(res.forecast.forecastday[0].date);
         day.textContent =  `${convertedDate}, ${onlyDay}`;
         time.textContent = onlyTime;
         temp.textContent = currentTempType() == 0 ? `${res.current.temp_c}°` : `${res.current.temp_f}°`;
@@ -39,7 +39,8 @@ function createMainInfo(req) {
 function createHourlyInfo(req) {
     const hourBox = document.querySelector("#hoursTemp");
     requestWeather(req).then((res) => {
-        for(let i = 0; i <= res.forecast.forecastday[0].hour.length; i++){
+        console.log(res);
+        for(let i = 0; i <= res.forecast.forecastday[0].hour.length - 1; i++){
             const div = document.createElement("div");
             const time = document.createElement("span");
             const img = document.createElement("img");
@@ -50,6 +51,7 @@ function createHourlyInfo(req) {
 
             time.classList.add("hourTime");
             time.setAttribute("id", `hourTime${i}`);
+            console.log(res.forecast.forecastday[0].hour[i].time);
             let onlyTime = res.forecast.forecastday[0].hour[i].time;
             time.textContent = onlyTime.slice(10);
             
@@ -88,7 +90,7 @@ function createForecast(req) {
                 img.classList.add("forecastImg");
                 forecastTemp.classList.add("forecastTemp");
     
-                let convertedDate = getDayName(res.forecast.forecastday[i].date, "en-US")
+                let convertedDate = getDayName(res.forecast.forecastday[i].date)
                 forecastDay.textContent = convertedDate;
                 img.src = res.forecast.forecastday[i].day.condition.icon;
                 spanCondition.textContent = res.forecast.forecastday[i].day.condition.text;
