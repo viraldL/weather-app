@@ -1,5 +1,4 @@
 # weather-app
-# !!!API BROKE!!!
 Weather app options:
 - Choose between celsius and fahrenheit
 - Search your own city!
