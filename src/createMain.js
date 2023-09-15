@@ -39,7 +39,6 @@ function createMainInfo(req) {
 function createHourlyInfo(req) {
     const hourBox = document.querySelector("#hoursTemp");
     requestWeather(req).then((res) => {
-        console.log(res);
         for(let i = 0; i <= res.forecast.forecastday[0].hour.length - 1; i++){
             const div = document.createElement("div");
             const time = document.createElement("span");
@@ -51,7 +50,6 @@ function createHourlyInfo(req) {
 
             time.classList.add("hourTime");
             time.setAttribute("id", `hourTime${i}`);
-            console.log(res.forecast.forecastday[0].hour[i].time);
             let onlyTime = res.forecast.forecastday[0].hour[i].time;
             time.textContent = onlyTime.slice(10);
             
